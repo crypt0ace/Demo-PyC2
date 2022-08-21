@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>
+            EXECUTE
+        </h1>
+
+        <h2>
+            Execute commands of your choice here.
+        </h2>
+
+        <form action = "http://127.0.0.1:5000/{{name}}/execute" , method = "POST">
+            <p>
+                Enter Command: 
+            </p>
+            <input type = "text" , name = "command">
+            <input type="submit">
+        </form>
+
+        <pre>
+            {{ out_cmd }}
+        </pre>
+
+    </body>
+</html>
